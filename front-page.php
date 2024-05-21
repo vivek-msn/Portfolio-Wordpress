@@ -1,3 +1,4 @@
+<?php get_header() ?>
 
 <!-- Banner section  -->
 <section id="home" class="banner_wrapper">
@@ -397,3 +398,5 @@
         </div>
     </section>
     <!-- Blog Section exit  -->
+
+    <?php get_footer() ?>
