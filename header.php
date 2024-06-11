@@ -17,8 +17,14 @@
         <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container">
               <a class="navbar-brand" href="#">
-                <img src="" alt="logo" class="img-fluid">
-                <?php the_custom_logo(); ?>
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+                  <?php if( has_custom_logo() ): ?>
+                    <?php the_custom_logo(); ?>
+                  <?php else: ?>
+                    <p class="site-title"><?php bloginfo( 'title' ); ?></p>
+                    <span><?php bloginfo( 'description' ); ?></span>
+                  <?php endif; ?>
+                </a>
               </a>
 
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
