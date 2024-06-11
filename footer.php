@@ -1,7 +1,7 @@
 <!-- Footer section  -->
 <section id="contact" class="footer_wrapper mt-3 mt-md-0">
         <div class="container">
-            <div class="row">
+            <div class="row">   
                 <div class="col-12 newsletter text-center px-4">
                     <div>
                         <h3 class="text-white">get update from anywhere</h3>
@@ -23,7 +23,7 @@
             <div class="row align-items-center justify-content-center">
                 <div class="col-12 text-center">
                     <div class="footer-logo mb-3 mb-md-0">
-                        <img src="images/logo.png" alt="footer-logo" class="img-fluid">
+                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/logo.png" alt="footer-logo" class="img-fluid">
                     </div>
                     <div class="my-4 social-icons">
                         <h5>Follow Me</h5>
@@ -43,4 +43,5 @@
             </div>
         </div>
     </section>
-    <!-- Footer section exit  -->
+    <?php wp_footer(); ?>
+    <!-- Footer section exit  -->               

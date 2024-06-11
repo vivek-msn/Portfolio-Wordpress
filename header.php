@@ -1,22 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Landing Page</title>
 
     <!-- FAVICON -->
-    <link rel="icon" href="images/favicon.png" type="image/png">
-
-    <!-- Bootstrap 5 CDN Links -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <!-- Custom File's Link  -->
-    <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" href="CSS/responsive-style.css">
-
-</head>
+    <link rel="icon" href="assets/images/favicon.png" type="image/png">
+    <?php wp_head(); ?>
+   </head>
 
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="90">
 
