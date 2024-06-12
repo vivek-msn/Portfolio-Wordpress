@@ -33,8 +33,18 @@
         )  );
         add_theme_support('title-tag');
         add_theme_support('post-thumbnails');
+
+        // This Theme Uses wp_nav_menu() 
+        register_nav_menus(
+            array(
+                'portfolio_main_menu' => esc_html__( 'Portfolio Main Menu', 'portfolio theme'),
+            )
+        );
     }
 
     add_action('after_setup_theme', 'portfolio_config_setup');
+
+    // Register Custom Navigation Walker 
+     require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
 
     ?>

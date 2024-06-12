@@ -31,28 +31,18 @@
                 <span class="navbar-toggler-icon"></span>
               </button>
 
-              <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav menu-navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#services">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">Portfolio</a>
-                    </li> 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#blog">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>                           
-                </ul>
-              </div>
+              <?php
+											wp_nav_menu( array(
+												'theme_location'    => 'portfolio_main_menu',
+												'depth'             => 3,
+												'container'         => 'div',
+												'container_class'   => 'collapse navbar-collapse',
+												'container_id'      => 'bs-example-navbar-collapse-1',
+												'menu_class'        => 'nav navbar-nav ms-auto',
+												'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+												'walker'            => new WP_Bootstrap_Navwalker(),
+											) );
+							?>
             </div>
           </nav>
     </header>
