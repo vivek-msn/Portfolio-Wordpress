@@ -57,10 +57,7 @@ get_header() ?>
                 </div>
                 <div class="col-lg-5 mb-4 mb-lg-0">
                     <h3>let’s <br>Introduce about <br>myself</h3>
-                    <p>Experienced SEO Specialist and WordPress Developer with a proven track record of success in optimizing websites for search engines 
-                        and customizing WordPress themes and plugins. With 1 year of dedicated experience in SEO and 2 years specializing in WordPress theme 
-                        and plugin customization, coupled with an additional 2 years focused on plugin and theme development, I bring a comprehensive understanding 
-                        of web development and digital marketing strategies.</p>
+                    <p><?php echo wp_kses_post( get_field('about_description') ); ?></p>
                     <a href="https://drive.usercontent.google.com/download?id=13jjRN5k4FdHeARLe1suvXzjHnqfsLV3l&export=download&authuser=0&confirm=t&uuid=a64094a8-36ee-47cc-9277-02e431b766a0&at=APZUnTXUtySCUnxaHw8IqYQgmhww:1708966137870" class="main-btn primary-btn mt-4">Download CV</a>
                 </div>
             </div>
