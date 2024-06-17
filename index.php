@@ -12,11 +12,13 @@
  * @package Responsive Portfolio
  */
 
-//  Variables Decalares here
+//  Variables Decalares here for Acf
 
 $name = get_field('enter_your_name');
 $profession = get_field('role');
 $cv_url = get_field('enter_cv_or_resume_url_here');
+$image_top_right_banner = get_field('image_top_banner_right');
+$size_top_right_banner = 'full'; //thumbnail,medium,large,full or custom size 
 
 get_header() ?>
 
@@ -35,7 +37,10 @@ get_header() ?>
                 </div>
                 <div class="col-lg-5 order-lg-2 order-1">
                     <div class="top-right-img">
-                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home-right.webp" class="img-fluid">
+                        <?php
+                        if( !empty( $image_top_right_banner ) ): ?>
+                        <img src="<?php echo esc_url($image_top_right_banner['url']); ?>" alt="" class="img-fluid">
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
